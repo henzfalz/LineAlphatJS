@@ -134,7 +134,7 @@ class LINE extends Command {
         this.command(`kick`, this.OnOff.bind(this));
         this.command(`cancel`, this.OnOff.bind(this));
         this.command(`qrp ${payload}`, this.OnOff.bind(this));
-        this.command(`.kickall`,this.kickAll.bind(this));
+        this.command(`.kickall ${payload}`,this.kickAll.bind(this));
         this.command(`.cancelall ${payload}`, this.cancelMember.bind(this));
         this.command(`.set`,this.setReader.bind(this));
         this.command(`.recheck`,this.rechecks.bind(this));
@@ -144,7 +144,7 @@ class LINE extends Command {
         this.command(`.ig ${payload}`,this.checkIG.bind(this))
         this.command(`.qr ${payload}`,this.qrOpenClose.bind(this))
         this.command(`.joinqr ${payload}`,this.joinQr.bind(this));
-        this.command(`.spam`,this.spamGroup.bind(this));
+        this.command(`.spam ${payload}`,this.spamGroup.bind(this));
         this.command(`.creator`,this.creator.bind(this));
 
         this.command(`pap ${payload}`,this.searchLocalImage.bind(this));
