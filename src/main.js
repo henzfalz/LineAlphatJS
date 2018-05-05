@@ -170,20 +170,6 @@ class LINE extends Command {
             this.resetStateUpload();
             return;
         }
-         if(txt === 'kl' && this.stateStatus.kick == 1 && isAdminOrBot(seq.from)) {
-            let { listMember } = await this.searchGroup(seq.to);
-            for (var i = 0; i < listMember.length; i++) {
-            if(!isAdminOrBot(listMember[i].mid)){
-            this._kickMember(seq.to,[listMember[i].mid])
-                }
-            }
-        }
-          
-         if(cmd == 'spm' && isAdminOrBot(seq.from)) { // untuk spam invite contoh: spm <mid>
-            for (var i = 0; i < 4; i++) {
-                this._createGroup(`spam`,payload);
-            }
-        }
         // if(cmd == 'lirik') {
         //     let lyrics = await this._searchLyrics(payload);
         //     this._sendMessage(seq,lyrics);
